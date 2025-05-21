@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You're Beautiful</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #e0f7fa);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff4d88;
+    }
+
+    #hearts {
+      margin-top: 20px;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    .heart {
+      margin: 0 5px;
+      transition: transform 0.3s;
+    }
+
+    .heart:hover {
+      transform: scale(1.4);
+    }
+
+    #message {
+      margin-top: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #4a148c;
+    }
+
+    #seen-by {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #00695c;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you know there are 3 ways to be beautiful?<br>Click on these hearts to see them</h1>
+
+  <div id="hearts">
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+    <span class="heart">❤️</span>
+  </div>
+
+  <div id="message"></div>
+  <div id="seen-by"></div>
+
+  <script>
+    const hearts = document.querySelectorAll('.heart');
+    const message = document.getElementById('message');
+    const seenBy = document.getElementById('seen-by');
+
+    hearts.forEach(heart => {
+      heart.addEventListener('click', () => {
+        message.textContent = "You're already beautiful Mohtarma.";
+        seenBy.textContent = "to be seen by ꕶＡᏆᎡＡ    ᎪᎻＭᎪᎠ     𝑄UᎬᎬ𝐍    👸🏻";
+      });
+    });
+  </script>
+</body>
+</html>
